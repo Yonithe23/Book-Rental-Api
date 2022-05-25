@@ -1,11 +1,11 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router()
 
-const customer = require('../models/customer')
-
+const catagory = require('../models/catagory')
 router.get('/', (req, res) => {
     res.send("Hello world");
 });
+
 router.post('/', (req, res) => {})
 
 router.put('/', (req, res) => {})

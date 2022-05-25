@@ -18,7 +18,8 @@
   "homepage": "https://github.com/Yonithe23/Book-Rental-Api#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "mongose": "^0.0.2-security",
+    "joi": "^13.1.0",
+    "mongoose": "^6.3.4",
     "nodemon": "^2.0.16"
   }
 }
