@@ -18,15 +18,18 @@ const Customer = mongoose.model('Customer' , new mongoose.Schema({
         validate: /^\d{6,16}$/
       }  
 }))
-function validateUser(customer) {
-    const schema = {
-        name: Joi.string().min(5).max(50).required(),
-        email: Joi.string().min(5).max(255).required().email(),
-        password: Joi.string().min(5).max(255).required()
-    };
-    return Joi.validate(customer, schema);
+function validateCustomer(customer) {
+  const schema = {
+    name: Joi.string()
+      .min(3)
+      .required(),
+    phone: Joi.string().min(5).max(50).required,
+    isGold: Joi.boolean()
+  };
+
+  return Joi.validate(customer, schema);
 }
 
 module.exports = {
   Customer : Customer,
-  validate : validateUser};
+  validate : validateCustomer};
