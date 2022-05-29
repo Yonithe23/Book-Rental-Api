@@ -28,7 +28,7 @@ function validateBook(book) {
         .min(5)
         .max(50)
         .required(),
-      genreId: Joi.objectId().required(),
+      catagoryId: Joi.objectId().required(),
       numberInStock: Joi.number()
         .min(0)
         .required(),
